@@ -161,7 +161,7 @@
     <finalName>activemq-provider</finalName>
   </build>
   <parent>
-  	<groupId>com..ja0ck5.activemq</groupId>
+  	<groupId>com.ja0ck5.activemq</groupId>
   	<artifactId>activemq-parent</artifactId>
   	<version>0.0.1-SNAPSHOT</version>
   </parent>
