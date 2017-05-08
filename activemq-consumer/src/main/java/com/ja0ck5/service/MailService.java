@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.ja0ck5.entity.Mail;
 
-@Service("mailService")
+@Service
 public class MailService {
 
 	@Autowired
@@ -19,11 +19,6 @@ public class MailService {
 	@Autowired
 	private ThreadPoolTaskExecutor threadPool;
 
-	/**
-	 * <B>方法名称：</B>发送邮件<BR>
-	 * <B>概要说明：</B>发送邮件<BR>
-	 * @param mail
-	 */
 	public void mailSend(final Mail mail) {
 		threadPool.execute(new Runnable() {
 			public void run() {
@@ -35,7 +30,6 @@ public class MailService {
 					mailSender.send(simpleMailMessage);
 				} catch (MailException e) {
 					e.printStackTrace();
-					throw e;
 				}
 			}
 		});
